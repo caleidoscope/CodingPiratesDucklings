@@ -33,3 +33,13 @@ function draw() {
   text(playerName, 20, 40);
   text(scoreText, 20, 70);
 }
+
+function mousePressed() {
+  // Calculate the distance between the mouse and the center of the duck
+  let distance = dist(mouseX, mouseY, duckX + 50, duckY + 50);
+
+  // If the distance is less than the duck's radius, it's a hit!
+  if (distance < 50) {
+    ducksFed = ducksFed + 1;
+  }
+}
